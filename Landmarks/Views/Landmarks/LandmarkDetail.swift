@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUICore
 
 struct LandmarkDetail: View {
     
@@ -17,6 +18,8 @@ struct LandmarkDetail: View {
     }
     
     var body: some View {
+        @Bindable var modelData = modelData
+        
         ScrollView{
             VStack {
                 MapView(coordinate: landmark.locationCoordinate)
@@ -29,9 +32,11 @@ struct LandmarkDetail: View {
                 
                 
                 VStack(alignment: .leading) {
-                    Text(landmark.name)
-                        .font(.title)
-                    
+                    HStack {
+                        Text(landmark.name)
+                            .font(.title)
+                        FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                    }
                     
                     HStack {
                         Text(landmark.park)
