@@ -54,7 +54,6 @@
 				Resources/landmarkData.json,
 				Views/Helper/CircleImage.swift,
 				Views/Helper/MapView.swift,
-				Views/Landmarks/LandmarkList.swift,
 				Views/Landmarks/LandmarkRow.swift,
 			);
 			target = 25442BBE2CDCB88700D702E0 /* WatchLandmarks Watch App */;
@@ -73,6 +72,7 @@
 				Views/Helper/CircleImage.swift,
 				Views/Helper/FavoriteButton.swift,
 				Views/Helper/MapView.swift,
+				Views/Landmarks/LandmarkCommands.swift,
 				Views/Landmarks/LandmarkList.swift,
 				Views/Landmarks/LandmarkRow.swift,
 			);
